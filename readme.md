@@ -11,16 +11,18 @@ Works on both Circuit Playground Express and Bluefruit devices.
 # Usage
 The app has 3 main states:
 - Time Setting State
-    - This is the state the app begins with
-    - Set the time by pressing (A) or (B) buttons on the device
+    - This is the state the app begins with.
+    - D13 LED is ON during this state.
+    - Set the time by pressing (A) or (B) buttons on the device.
     - (A) adds 10 minutes. (B) adds 5 minutes.
     - Every 5 minutes is represented by 1 of the Neopixels. (A) button will light up 2 pixels. (B) button will light up 1 pixel.
     - When the desired time is set you can start the count down by holding one button down and then pressing and releasing the other button. Then finally releasing the first button.
-     
+    - If you accidentally press a button too many times you can press reset to start over. 
 - Time Counting Down State
     - Each of the 5 minute interval LEDs will turn off in succession as time passes.
-    - Press either button to pause the count down. 
-        - Press either button again to resume
+    - Press either button to pause the count down.
+        - Remaining time pixels will turn green during Paused state.
+        - Press either button again to resume.
     - After the full time has elapsed the timer will enter the Counting Finished state.
 
 - Counting Finished State:
